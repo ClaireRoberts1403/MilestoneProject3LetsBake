@@ -53,6 +53,10 @@ body {
     background-attachment: fixed;
 }
 
+. recipe_btn {
+    padding-left: 10px;
+}
+
 /* page not found page */
 .pageNotFound-title {
     color: black;

@@ -31,6 +31,7 @@ def add_recipe():
 def submit_recipe():
     add_recipe = mongo.db.Recipes
 
+
     name = request.form['name']
     category_name = request.form['category_name']
     prep_time = request.form['prep_time']
@@ -56,6 +57,12 @@ def submit_recipe():
     add_recipe.insert_one(request.form.to_dict())
     mongo.save_file(recipe_image.filename, recipe_image)
     return render_template("Message.html")
+
+
+@app.route('/recipe')
+def recipe():
+    recipe = mongo.db.Recipes.find_one()
+    return render_template("recipe.html", Recipes=recipe)
 
 
 #test to see recipe image returning from mongodb
