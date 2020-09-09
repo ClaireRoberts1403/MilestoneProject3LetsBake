@@ -19,5 +19,12 @@ def index():
     recipe_of_the_week = mongo.db.Recipes.find()
     return render_template("index.html", Recipes=recipe_of_the_week)
 
+# send user to add recipe page form
+@app.route('/add_recipe')
+def add_recipe():
+    return render_template("add_recipe.html")
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)

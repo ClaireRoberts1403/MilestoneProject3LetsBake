@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block head %}
+<!-- add recipe page is a form to insert information in the db, leads to review and submit page(which is also the edit page)-->
+<div>
+<img class="banner" src="./static/images/upload.jpg">
+        <h1 class="smaller-title">
+          Add Your Recipe Here..</h1>
+</div>
+<br>
+{% endblock %}
+{% block content %}
+<form action="#" name="my_recipe" enctype="multipart/form-data" method="POST" class="upload_form">
+    <div class="form-group">
+        <div class="row">
+            <label class="col-form-label">Your Recipe Name</label>
+            <div class="col-md">
+                <input name="name" type="text" class="form-control" placeholder="Enter a name">
+            </div>
+            <label class="col-form-label">Choose Category</label>
+            <div class="col-md">
+                <div class="form-group">
+                    <select name="category_name" class="form-control" id="exampleFormControlSelect1">
+                        <option>Cakes</option>
+                        <option>Biscuits</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <label class="col-form-label">Preparation Time</label>
+            <div class="col-md">
+                <input name="prep_time" type="text" class="form-control" placeholder="In minutes">
+            </div>
+            <label class="col-form-label">Cooking Time</label>
+            <div class="col-md">
+                <input name="cooking_time" type="text" class="form-control" placeholder="In minutes">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <label class="col-form-label">Effort Level</label>
+            <div class="col-md">
+                <div class="form-group">
+                    <select name="effort_level" class="form-control">
+                        <option>Easy</option>
+                        <option>Moderate</option>
+                        <option>Fair bit of effort needed</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <label class="col-form-label">Serves/Makes</label>
+            <div class="col-md">
+                <input name="serves" type="text" class="form-control" placeholder="How many does your recipe serve?">
+            </div>
+        </div>
+        <br>
+        <label for="ingredientsTextarea"><h4>Ingredients</h4></label>
+        <textarea name="ingredients" class="form-control" id="ingredientsTextarea" rows="3"
+                  placeholder="List your ingredients here. Remember to include quantity."></textarea>
+        <br>
+        <label for="methodTextarea"><h4>Method</h4></label>
+        <textarea name="method" class="form-control" id="methodTextarea" rows="3"
+                  placeholder="Write your method here, include oven temperatures and all steps needed to bake your amazing recipe"></textarea>
+        <br>
+        <input class="btn btn-info" type="file" name="recipe_image">Upload Image</input>
+        <!---- preview button submits data to mongodb and links to my_recipe page to allow editing, deletion and a user submit which links back to index-->
+        <button name="uploaded_on" class="btn btn-info float-right" type="datetime-local"> Submit Recipe
+        </button>
+    </div>
+</form>
+
+{% endblock %}
