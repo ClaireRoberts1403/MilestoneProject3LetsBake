@@ -9,7 +9,7 @@
 <br>
 {% endblock %}
 {% block content %}
-<form action="#" name="my_recipe" enctype="multipart/form-data" method="POST" class="upload_form">
+<form action="{{url_for('submit_recipe')}}" name="add_recipe_form" enctype="multipart/form-data" method="POST" class="upload_form">
     <div class="form-group">
         <div class="row">
             <label class="col-form-label">Your Recipe Name</label>
