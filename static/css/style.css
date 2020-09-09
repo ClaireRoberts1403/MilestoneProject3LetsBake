@@ -53,8 +53,12 @@ body {
     background-attachment: fixed;
 }
 
-. recipe_btn {
+.recipe_btn {
     padding-left: 10px;
+}
+
+.container-fluid recipe_page {
+    padding-top: 20px;
 }
 
 /* page not found page */

@@ -61,14 +61,19 @@ def submit_recipe():
 
 @app.route('/recipe')
 def recipe():
-    recipe = mongo.db.Recipes.find_one()
-    return render_template("recipe.html", Recipes=recipe)
+    Recipes = mongo.db.Recipes.find_one()
+    return render_template("recipe.html", Recipes=Recipes)
 
 
 #test to see recipe image returning from mongodb
 @app.route('/image/<recipe_image>')
 def image(recipe_image):
     return mongo.send_file(recipe_image)
+
+# 404 error page personalised to site
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template("page_not_found.html"), 404
 
 
 if __name__ == '__main__':
