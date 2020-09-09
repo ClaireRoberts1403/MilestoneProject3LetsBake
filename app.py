@@ -1,10 +1,8 @@
 import os
-import time
-from flask import Flask, render_template, request
-from flask_pymongo import PyMongo, pymongo
-from bson.objectid import ObjectId
+from flask import Flask, render_template
+from flask_pymongo import PyMongo
 
-if os.path.exists("venv/env.py"):
+if os.path.exists("env.py"):
     import env
 
 app = Flask(__name__)
@@ -18,7 +16,7 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def index():
-    recipe_of_the_week = mongo.db.Recipes.find({"_id": 'ObjectId("5f491c75885c2e445ab07664")'})
+    recipe_of_the_week = mongo.db.Recipes.find()
     return render_template("index.html", Recipes=recipe_of_the_week)
 
 if __name__ == '__main__':
