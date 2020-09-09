@@ -1,21 +1,22 @@
 {% extends 'base.html' %}
-{% block content %}
-{% for recipes in Recipes %}
-
+{% block head %}
 <!-- page to display all results in the category-->
 <div>
-<img class="container banner" src="./static/images/biscuits.jpg">
         <h1 class="smaller-title">
-           Recipes</h1>
+          Recipes</h1>
 </div>
-
-<div class="card mb-3 recipe_card" style="max-width: 100%;">
+{% endblock %}
+{% block content %}
+{% for Recipes in Recipes %}
+{% for category_type in Recipes %}
+<div class="card mb-3 recipe_card">
   <div class="row gutters">
     <div class="col-md-4">
       <img src= "static/images/hero.jpg" class="card-img" alt="Image Not Available">
     </div>
     <div class="col-md-8">
       <div class="card-body">
+
         <h5 class="card-title">{{Recipes.name}}</h5>
         <p class="card-text">Preparation Time: {{Recipes.prep_time}}</p>
           <p class="card-text">Cooking Time: {{Recipes.cooking_time}}</p>
@@ -28,5 +29,6 @@
   <a href="#" class="stretched-link"></a>
 </div>
 <br>
+{% endfor %}
 {% endfor %}
 {% endblock %}

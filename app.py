@@ -21,6 +21,14 @@ def index():
     recipe_of_the_week = mongo.db.Recipes.find()
     return render_template("index.html", Recipes=recipe_of_the_week)
 
+
+# category page displaying all recipes with a set category
+@app.route('/category/<category_type>')
+def category_page(category_type):
+    category_type = mongo.db.Recipes.find({"category_name": category_type})
+    return render_template('category_page.html', Recipes=category_type)
+
+
 # send user to add recipe form
 @app.route('/add_recipe')
 def add_recipe():

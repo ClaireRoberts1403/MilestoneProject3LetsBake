@@ -9,7 +9,7 @@
      <script src="https://kit.fontawesome.com/90ed803b97.js" crossorigin="anonymous"></script>
       <!-- Stylesheet -->
     <link rel="stylesheet" href="../static/css/style.css">
-      <link rel="icon" href="./static/images/favicon.ico">
+      <link rel="icon" href="../static/images/favicon.ico">
     <title>Lets Bake</title>
   </head>
 
@@ -31,10 +31,10 @@
          Browse Recipe Categories
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Cakes</a>
-          <a class="dropdown-item" href="#">Biscuits</a>
+          <a class="dropdown-item" href="{{ url_for('category_page', category_type='cake') }}">Cakes</a>
+          <a class="dropdown-item" href="{{ url_for('category_page', category_type='biscuits') }}">Biscuits</a>
             <!-- search keyword result left blank to render all recipes and send user to recipe_search_results-->
-          <a class="dropdown-item" href="#">All Recipes</a>
+          <a class="dropdown-item" href="{{ url_for('category_page', category_type='all') }}">All Recipes</a>
           <a class="dropdown-item disabled" href="#">More Coming Soon!</a>
         </div>
       </li>
