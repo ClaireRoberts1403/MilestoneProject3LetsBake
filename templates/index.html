@@ -30,14 +30,32 @@
                     <p class="card-text">Preparation Time: {{Recipe.prep_time}}</p>
                     <p class="card-text">Cooking Time: {{Recipe.cooking_time}}</p>
                     <p class="card-text">Serves: {{Recipe.serves}}</p>
-                    <p class="card-text">Effort Level: {{Recipe.effort_level}}</p>
-                    <p class="card-text">Ingredients: {{Recipe.ingredients}}</p>
-                    <p class="card-text">Method: {{Recipe.method}}</p>
+                    <p class="card-text">Effort Level: {{Recipe.effort_level}}</p><!-- Example single danger button -->
+                    <button class="btn btn-info btn-lrg" type="button" data-toggle="collapse"
+                                data-target="#ingredients" aria-expanded="false" aria-controls="collapseExample">
+                            Ingredients
+                        </button>
+                        <div class="collapse" id="ingredients">
+                            <div class="card card-body">
+                                <p>{{Recipe.ingredients}}</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-info btn-lrg" type="button" data-toggle="collapse"
+                                data-target="#method" aria-expanded="false" aria-controls="collapseExample">
+                            Method
+                        </button>
+                        <div class="collapse" id="method">
+                            <div class="card card-body">
+                                <p>{{Recipe.method}}</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
         <!-- href not working to link to full recipe card in my_recipe page -->
-        <a href="#" class="stretched-link"></a>
+        <!--a href="#" class="stretched-link"></a-->
     </div>
     <br>
 </div>
