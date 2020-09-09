@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block head %}
+
+<!-- index is the home page with the hero image and displaying a recipe of the week and a most recently added feature-->
+<div class="container-fluid hero-image">
+    <div class="container-fluid">
+        <h1 class="hero-title">
+            Lets Bake</h1>
+        <h3 class="hero-quote">
+            because then you can eat cake... or cookies...</h3>
+    </div>
+</div>
+<br>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Recipe that automatically changes each week -->
+    <h1>Recipe of the week</h1>
+    <br>
+    {% for Recipe in Recipes %}
+    <div class="card mb-3 recipe_card" style="max-width: 100%;">
+        <div class="row gutters">
+            <div class="col-md-4">
+                <img src="static/images/hero.jpg" class="card-img" alt="Image Not Available">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{Recipe.name}}</h5>
+                    <p class="card-text">Preparation Time: {{Recipe.prep_time}}</p>
+                    <p class="card-text">Cooking Time: {{Recipe.cooking_time}}</p>
+                    <p class="card-text">Serves: {{Recipe.serves}}</p>
+                    <p class="card-text">Effort Level: {{Recipe.effort_level}}</p>
+
+                </div>
+            </div>
+        </div>
+        <!-- href not working to link to full recipe card in my_recipe page -->
+        <a href="#" class="stretched-link"></a>
+    </div>
+    <br>
+</div>
+{% endfor %}
+
+{% endblock %}
