@@ -12,29 +12,51 @@
 <br>
 {% endblock %}
 {% block content %}
-{% for Recipes in Recipes %}
 {% for category_type in Recipes %}
-<br>
-<div class="card mb-3 recipe_card">
-  <div class="row gutters">
-    <div class="col-md-4">
-      <img src= "static/images/hero.jpg" class="card-img" alt="Image Not Available">
+{% for recipe in Recipes %}
+<div class="container-fluid">
+    <br>
+    <div class="card mb-3 recipe_card">
+        <div class="row gutters">
+            <div class="col-md-4">
+                <img src="static/images/hero.jpg" class="card-img" alt="Image Not Available">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{recipe.name}}</h5>
+                    <p class="card-text">Preparation Time: {{recipe.prep_time}}</p>
+                    <p class="card-text">Cooking Time: {{recipe.cooking_time}}</p>
+                    <p class="card-text">Serves: {{recipe.serves}}</p>
+                    <p class="card-text">Effort Level: {{recipe.effort_level}}</p>
+                    <p>
+                        <a class="btn btn-info" data-toggle="collapse" href="#multiCollapseExample1" role="button"
+                           aria-expanded="false" aria-controls="multiCollapseExample1">Ingredients</a>
+                        <button class="btn btn-info" type="button" data-toggle="collapse"
+                                data-target="#multiCollapseExample2" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Method
+                        </button>
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <div class="card card-body">
+                                  {{recipe.ingredients}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                <div class="card card-body">
+                                    {{recipe.method}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-
-        <h5 class="card-title">{{Recipes.name}}</h5>
-        <p class="card-text">Preparation Time: {{Recipes.prep_time}}</p>
-          <p class="card-text">Cooking Time: {{Recipes.cooking_time}}</p>
-          <p class="card-text">Serves: {{Recipes.serves}}</p>
-          <p class="card-text">Effort Level: {{Recipes.effort_level}}</p>
-
-      </div>
-    </div>
-  </div>
-  <a href="#" class="stretched-link"></a>
-</div>
-<br>
+ </div>
 {% endfor %}
 {% endfor %}
 {% endblock %}
