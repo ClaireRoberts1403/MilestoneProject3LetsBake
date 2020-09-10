@@ -86,18 +86,26 @@ def image(recipe_image):
 def page_not_found(error):
     return render_template("page_not_found.html"), 404
 
+
+#test to see recipe image returning from mongodb
+@app.route('/edit_recipe')
+def edit_recipe():
+    return render_template("edit_recipe.html")
+
 # edit function
-@app.route('/edit_recipe/<recipe_id>')
-def edit_recipe(recipe_id):
-    the_recipe = mongo.db.Recipes.find_one({"_id": ObjectId(recipe_id)})
-    all_recipes = mongo.db.Recipes.find()
-    return render_template(edit_recipe.html, recipe=the_recipe, Recipes=all_recipes)
+#@app.route('/edit_recipe/<recipe_id>')
+#def edit_recipe(recipe_id):
+#    the_recipe = mongo.db.Recipes.find_one({"_id": ObjectId(recipe_id)})
+#    all_recipes = mongo.db.Recipes.find()
+#    return render_template(edit_recipe.html, recipe=the_recipe, all_recipes=all_recipes)
+
+
 
 # delete function
-#@app.route('/recipe/<Recipes_id>/delete')
-#def deleteRecipe(Recipes_id):
-#    mongo.db.Recipes.remove({'_id': ObjectId(Recipes_id)})
-#    return render_template("index.html")
+@app.route('/delete_recipe')
+def delete_recipe(recipe_id):
+    mongo.db.Recipes.remove({'_id': ObjectId(recipe_id)})
+    return render_template("index.html")
 
 
 if __name__ == '__main__':

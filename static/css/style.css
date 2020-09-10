@@ -68,9 +68,9 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
-/*Recipe page styling*/
-.recipe_btn {
-    padding-left: 10px;
+/*Edit/Delete styling*/
+.edit_btn {
+    padding-right: 10px;
 }
 
 .container-fluid recipe_page {
