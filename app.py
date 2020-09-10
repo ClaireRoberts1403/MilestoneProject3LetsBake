@@ -103,10 +103,10 @@ def edit_recipe():
 
 
 # delete function no recipe id added as it throws an error and crashes the app?
-@app.route('/delete_recipe')
+@app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
-    mongo.db.Recipes.remove({'_id': ObjectId(recipe_id)})
-    return render_template("index.html")
+    mongo.db.Recipes.delete_one({'_id': ObjectId(recipe_id)})
+    return render_template("index.html", recipe_id=recipe_id)
 
 
 if __name__ == '__main__':

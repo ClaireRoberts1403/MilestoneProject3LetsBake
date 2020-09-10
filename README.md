@@ -2,13 +2,15 @@
 
 A Baking website for anyone to find and add baking recipes.
 
+Deployed by heroku at [https://dashboard.heroku.com/apps/milestone-project3-letsbake](https://dashboard.heroku.com/apps/milestone-project3-letsbake)
+
 ## UX
 This website is design for individuals looking for baking recipes and inspiration. 
 Users will be able to search using keywords for recipes(feature not enabled yet). Use a dropdown menu to browse categories of recipes, 
 as well as upload (images uploading but not being rendered back onto website), edit and delete their own recipes(features not enabled yet). 
 This site will inspire users to get their mixing bowls.
-![Image of indeximage](static/images/indeximage.jpg)
-![Image of addimage](static/images/addimage.jpg)
+![Image of indeximage](static/images/indeximage.png)
+![Image of addimage](static/images/addimage.png)
 
 ## Design
 
@@ -102,6 +104,7 @@ In the final build I haven't been able to connect to heroku. The terminal states
 haven't fixed this issues and fixing the bug of "ValueError: you must specify a URI". Still caused the app to crash. With an error code h10. Due to the sheer amount of time I have already
 spent trying to fix these issues and on this project as a whole. The final product I submit is no where near what I know is needed or what I wanted to hand in yet after a weeks extension, 
 and hitting wall after wall I feel like I have to just accept defeat and move on. 
+With the help of tutor support I am connected to Heroku. The fix was due to putting the mongodb url in the env.py file the config vars where not complete.
 
 
 ## Deployment
