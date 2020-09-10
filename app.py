@@ -70,10 +70,10 @@ def submit_recipe():
     return render_template("Message.html")
 
 # To display full recipe with link to edit and delete recipe
-@app.route('/recipe')
-def recipe():
-    Recipes = mongo.db.Recipes.find_one()
-    return render_template("recipe.html", Recipes=Recipes)
+#@app.route('/recipe')
+#def recipe():
+#    Recipes = mongo.db.Recipes.find_one()
+ #   return render_template("recipe.html", Recipes=Recipes)
 
 
 #test to see recipe image returning from mongodb
@@ -87,11 +87,11 @@ def page_not_found(error):
     return render_template("page_not_found.html"), 404
 
 # edit function
-#@app.route('/edit_recipe/<recipe_id>')
-#def edit_recipe(recipe_id):
-#    the_recipe = mongo.db.Recipes.find_one({"_id": ObjectId(recipe_id)})
-#    all_recipes = mongo.db.Recipes.find()
-#    return render_template(edit_recipe.html, recipe=the_recipe, Recipes=all_recipes)
+@app.route('/edit_recipe/<recipe_id>')
+def edit_recipe(recipe_id):
+    the_recipe = mongo.db.Recipes.find_one({"_id": ObjectId(recipe_id)})
+    all_recipes = mongo.db.Recipes.find()
+    return render_template(edit_recipe.html, recipe=the_recipe, Recipes=all_recipes)
 
 # delete function
 #@app.route('/recipe/<Recipes_id>/delete')
