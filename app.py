@@ -70,12 +70,6 @@ def submit_recipe():
     mongo.save_file(recipe_image.filename, recipe_image)
     return render_template("Message.html")
 
-# To display full recipe with link to edit and delete recipe
-#@app.route('/recipe')
-#def recipe():
-#    Recipes = mongo.db.Recipes.find_one()
- #   return render_template("recipe.html", Recipes=Recipes)
-
 
 #test to see recipe image returning from mongodb
 @app.route('/image/<recipe_image>')
@@ -93,7 +87,7 @@ def page_not_found(error):
 def edit_recipe():
     return render_template("edit_recipe.html")
 
-# edit function
+# edit function no working correctly due to an error with ObjectId
 #@app.route('/edit_recipe/<recipe_id>')
 #def edit_recipe(recipe_id):
 #    the_recipe = mongo.db.Recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -102,11 +96,11 @@ def edit_recipe():
 
 
 
-# delete function no recipe id added as it throws an error and crashes the app?
+# delete function no working correctly due to an error with ObjectId
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
     mongo.db.Recipes.delete_one({'_id': ObjectId(recipe_id)})
-    return render_template("index.html", recipe_id=recipe_id)
+    return render_template("index.html")
 
 
 if __name__ == '__main__':
