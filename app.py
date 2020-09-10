@@ -6,6 +6,8 @@ from bson.objectid import ObjectId
 if os.path.exists("env.py"):
     import env
 
+recipe_id = ObjectId
+
 app = Flask(__name__)
 
 #Mongodb database set up
@@ -18,8 +20,8 @@ mongo = PyMongo(app)
 #home page
 @app.route('/')
 def index():
-    recipe_of_the_week = mongo.db.Recipes.find()
-    return render_template("index.html", Recipes=recipe_of_the_week)
+    all_recipes = mongo.db.Recipes.find()
+    return render_template("index.html", Recipes=all_recipes)
 
 
 # category page displaying all recipes with a set category
