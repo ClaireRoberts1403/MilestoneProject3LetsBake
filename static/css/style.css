@@ -35,12 +35,23 @@ body {
     font-weight: 400;
     font-size: 2em;
 }
-
+/* index page sub quote */
 .why_not {
     padding-top: 5%;
     font-weight: bold;
 
 }
+
+.cheesecake-image {
+    background: url("../images/cheesecake.jpg");
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 
 /*Recipe card*/
 .recipe_card {

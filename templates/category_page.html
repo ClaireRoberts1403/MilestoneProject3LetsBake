@@ -1,14 +1,20 @@
 {% extends 'base.html' %}
 {% block head %}
 <!-- page to display all results in the category-->
-<div>
-        <h1 class="smaller-title">
-          Recipes</h1>
+<div class="container-fluid cheesecake-image">
+    <div class="container-fluid">
+        <h1 class="hero-title">
+            Lets Bake</h1>
+        <h3 class="hero-quote">
+            because then you can eat cake... or cookies...</h3>
+    </div>
 </div>
+<br>
 {% endblock %}
 {% block content %}
 {% for Recipes in Recipes %}
 {% for category_type in Recipes %}
+<br>
 <div class="card mb-3 recipe_card">
   <div class="row gutters">
     <div class="col-md-4">
