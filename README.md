@@ -69,6 +69,7 @@ Built in PyCharm
 ## Testing
 
 
+
 ##Debugging
 Debugging, during first master push to heroku I kept receiving an error that the app was crashing. Through thorough checking and trying different fixes 
 it was eventually solve through using gunicorn in the profile and update the requirements.txt. This resolved the issue through trying different fixes I 
@@ -149,8 +150,17 @@ mongo = PyMongo(app)
 
 ## Credits
 ### Content
-The text for section Y was copied from the Wikipedia article Z
+The recipes are taken from [bbc GoodFood](www.bbcgoodfood.com) without permission but are for educational use only
 ### Media
-The photos used in this site were obtained from ...
+The images are taken from google search without permission but are for educational use only
 ### Acknowledgements
-I received inspiration for this project 
+I received inspiration for this project from the milestone3 brief from the Code Institute.
+
+I have had a lot of issues with this project starting from the complexity of setting up the IDE, connecting to Mongo and Heroku.
+To blindly following some advise causing me to have to start over the project twice. I fully acknowledge my own short comings with 
+huge gaps in my knowledge about IDE's, computers and PATH variables. I tried to use other languages to fix the issues I was having
+and basically overwhelmed myself. I also acknowledge that I should have asked for more help, I feel personally that the issue I had 
+was not being able methodically go through each issue at a time, and find that fix that would stick and understand why it has worked.
+This project is a huge disappointment in what I would want to submit, yet I feel like I have to draw the line under this project and 
+move on. This may cause me to fail the course but I have no more time/energy/will to spend on this project.
+ 
