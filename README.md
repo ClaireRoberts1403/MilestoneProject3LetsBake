@@ -10,7 +10,7 @@ Users will be able to search using keywords for recipes(feature not enabled yet)
 as well as upload (images uploading but not being rendered back onto website), edit and delete their own recipes(features not enabled yet). 
 This site will inspire users to get their mixing bowls.
 ![Image of indeximage](static/images/indeximage.png)
-![Image of addimage](static/images/addimage.png)
+![Image of addimage](static/images/addpage.png)
 
 ## Design
 
