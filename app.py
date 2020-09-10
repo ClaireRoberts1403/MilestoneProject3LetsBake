@@ -14,7 +14,7 @@ app = Flask(__name__)
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
-os.environ["MONGO_URI"] = app.config["MONGO_URI"]
+
 
 mongo = PyMongo(app)
 
@@ -102,7 +102,7 @@ def edit_recipe():
 
 
 
-# delete function
+# delete function no recipe id added as it throws an error and crashes the app?
 @app.route('/delete_recipe')
 def delete_recipe(recipe_id):
     mongo.db.Recipes.remove({'_id': ObjectId(recipe_id)})

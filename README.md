@@ -68,7 +68,7 @@ Built in PyCharm
 
 ## Testing
 
-
+Due to the incompleteness of the project, no testing has been completed.
 
 ##Debugging
 Debugging, during first master push to heroku I kept receiving an error that the app was crashing. Through thorough checking and trying different fixes 
