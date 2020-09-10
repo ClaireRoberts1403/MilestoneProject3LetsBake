@@ -13,7 +13,8 @@ app = Flask(__name__)
 #Mongodb database set up
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
+os.environ["MONGO_URI"] = app.config["MONGO_URI"]
 
 mongo = PyMongo(app)
 
