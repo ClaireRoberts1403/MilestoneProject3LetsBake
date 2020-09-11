@@ -8,7 +8,7 @@ Deployed by heroku at [https://dashboard.heroku.com/apps/milestone-project3-lets
 This website is design for individuals looking for baking recipes and inspiration. 
 Users will be able to search using keywords for recipes(feature not enabled yet). Use a dropdown menu to browse categories of recipes, 
 as well as upload (images uploading but not being rendered back onto website), edit and delete their own recipes(features not enabled yet). 
-This site will inspire users to get their mixing bowls.
+This site will inspire users to grab their mixing bowls and get baking.
 ![Image of indeximage](static/images/indeximage.png)
 ![Image of addimage](static/images/addpage.png)
 
@@ -70,7 +70,28 @@ Built in PyCharm
 
 ## Testing
 
-Due to the incompleteness of the project, no testing has been completed.
+Index page - The index page looks bold, the recipes pull through from MongoDB to allow users to browse all the recipes on the site. The images do not pull through
+from Mongo so a place holder image is in place. The recipes cards display the ingredients and the method on the click on a button. This text is not formatted in a
+user friendly way and would be something to fix. Currently the delete and edit buttons on the recipe card do not work as they should due to an error I can't fix.
+The index page scales well from large screen to tablet to large phone size. Below 405px some of the title text is off screen. The recipe cards look strong at all
+screen sizes, however the buttons causes issues with readability below the tablet screen size and diverting to a recipe page would be a better option.
+
+The navbar - The navbar functionality works well. All the links work as they should and the responsiveness is strong at all screen sizes. However, the search bar does
+not work. 
+
+Categories page - The categories page again is bold in its set up. The recipe cakes bring through the bold titles of the recipe from mongodb. The responsiveness
+is the same as the index page. The recipes display in the correct category from the database and after a user has added their recipe that too is displayed in the correct
+category.
+
+Add recipe page - The form on this page could be better aligned for better ux. The input text box for ingredients could be change to something clearer for the user to add all 
+the information needed. The file upload button should be styled to match the submit button. The responsiveness is but below 768px once the form goes to one input by line the form
+looks a lot stronger. The form submits the users recipe information into MongoDB including the image file. This functionality works well with the only issues of the return text 
+formatting with ingredients and the method. And the failure to display the recipe image, the image can be recalled from Mongodb using the @app.route('/image/<recipe_image>') if you use biscuithero.jpg the image is returned from the database.
+ Further information should be gathered at this stage such as date added automatically when submitting the recipe..
+
+The footer - The links and style of the social media icons all work.
+
+Due to the incompleteness of the project, no external testing has been completed.
 
 ##Debugging
 Debugging, during first master push to heroku I kept receiving an error that the app was crashing. Through thorough checking and trying different fixes 
@@ -165,5 +186,5 @@ huge gaps in my knowledge about IDE's, computers and PATH variables. I tried to 
 and basically overwhelmed myself. I also acknowledge that I should have asked for more help, I feel personally that the issue I had 
 was not being able methodically go through each issue at a time, and find that fix that would stick and understand why it has worked.
 This project is a huge disappointment in what I would want to submit, yet I feel like I have to draw the line under this project and 
-move on. This may cause me to fail the course but I have no more time/energy/will to spend on this project.
+move on. 
  
