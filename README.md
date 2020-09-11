@@ -94,7 +94,8 @@ The footer - The links and style of the social media icons all work.
 Due to the incompleteness of the project, no external testing has been completed.
 
 ##Debugging
-Debugging, during first master push to heroku I kept receiving an error that the app was crashing. Through thorough checking and trying different fixes 
+
+During first master push to heroku I kept receiving an error that the app was crashing. Through thorough checking and trying different fixes 
 it was eventually solve through using gunicorn in the profile and update the requirements.txt. This resolved the issue through trying different fixes I 
 also found an article to Config Vars for Deploy-Specific Settings for Heroku [Read that Article here](https://blog.heroku.com/config-vars). This enabled 
 me to secure the secret key without having it displayed anywhere in my code. Pretty cool.
