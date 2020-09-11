@@ -2,7 +2,7 @@
 
 A Baking website for anyone to find and add baking recipes.
 
-Deployed by heroku at [https://dashboard.heroku.com/apps/milestone-project3-letsbake](https://dashboard.heroku.com/apps/milestone-project3-letsbake)
+Deployed by heroku at [https://dashboard.heroku.com/apps/milestone-project3-letsbake](https://milestone-project3-letsbake.herokuapp.com/)
 
 ## UX
 This website is design for individuals looking for baking recipes and inspiration. 
